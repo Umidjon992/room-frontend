@@ -21,7 +21,7 @@ type Phase =
 
 function Message({ title, text, children }: { title: string; text: string; children?: ReactNode }) {
   return (
-    <main className="grid min-h-screen place-items-center px-4">
+    <main className="grid min-h-screen-dvh place-items-center px-4">
       <div className="max-w-md text-center">
         <h1 className="text-2xl font-bold">{title}</h1>
         <p className="mt-2 text-ink-400">{text}</p>
@@ -101,7 +101,7 @@ export function RoomClient({ roomId }: { roomId: string }) {
   switch (phase.type) {
     case "loading":
       return (
-        <main className="grid min-h-screen place-items-center">
+        <main className="grid min-h-screen-dvh place-items-center">
           <Loader2 className="h-8 w-8 animate-spin text-brand-400" aria-label="Загрузка" />
         </main>
       );

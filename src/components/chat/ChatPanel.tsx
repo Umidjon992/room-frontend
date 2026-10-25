@@ -88,7 +88,7 @@ export function ChatPanel({ open, onClose }: { open: boolean; onClose: () => voi
           maxLength={1000}
           placeholder="Сообщение…"
           aria-label="Сообщение"
-          className="min-w-0 flex-1 rounded-xl border border-ink-600 bg-ink-800 px-3.5 py-2.5 text-sm outline-none placeholder:text-ink-400 focus:border-brand-400"
+          className="min-w-0 flex-1 rounded-xl border border-ink-600 bg-ink-800 px-3.5 py-2.5 text-base sm:text-sm outline-none placeholder:text-ink-400 focus:border-brand-400"
         />
         <button
           type="submit"

@@ -44,9 +44,9 @@ export function HomeView() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <main className="relative min-h-screen-dvh overflow-hidden">
       <div className="pointer-events-none absolute -top-40 left-1/2 h-[480px] w-[780px] -translate-x-1/2 rounded-full bg-brand-500/20 blur-[120px]" />
-      <div className="relative mx-auto flex min-h-screen max-w-5xl flex-col px-4 sm:px-6">
+      <div className="relative mx-auto flex min-h-screen-dvh max-w-5xl flex-col px-4 sm:px-6">
         <header className="flex items-center gap-2 py-6">
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-400 to-accent">
             <Video className="h-5 w-5 text-ink-950" />
@@ -73,7 +73,7 @@ export function HomeView() {
                 onChange={(e) => setCode(e.target.value)}
                 placeholder="Ссылка или код комнаты"
                 aria-label="Ссылка или код комнаты"
-                className="min-w-0 flex-1 rounded-xl border border-ink-600 bg-ink-800 px-4 py-3 text-sm outline-none placeholder:text-ink-400 focus:border-brand-400"
+                className="min-w-0 flex-1 rounded-xl border border-ink-600 bg-ink-800 px-4 py-3 text-base sm:text-sm outline-none placeholder:text-ink-400 focus:border-brand-400"
               />
               <Button type="submit" variant="secondary" aria-label="Присоединиться" disabled={!code.trim()}>
                 <ArrowRight className="h-4 w-4" />

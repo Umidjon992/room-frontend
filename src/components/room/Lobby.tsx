@@ -115,7 +115,7 @@ export function Lobby({ roomId, roomName, joining, error, onJoin }: Props) {
   };
 
   return (
-    <main className="mx-auto grid min-h-screen max-w-5xl items-center gap-8 px-4 py-8 lg:grid-cols-[1.4fr_1fr]">
+    <main className="mx-auto grid min-h-screen-dvh max-w-5xl items-center gap-8 px-4 py-8 lg:grid-cols-[1.4fr_1fr]">
       <div>
         <div className="relative aspect-video overflow-hidden rounded-2xl border border-ink-700 bg-ink-800">
           <video
@@ -186,7 +186,7 @@ export function Lobby({ roomId, roomName, joining, error, onJoin }: Props) {
           onChange={(e) => setName(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && trimmed && !joining && submit()}
           placeholder="Как вас представить?"
-          className="mt-2 w-full rounded-xl border border-ink-600 bg-ink-800 px-4 py-3 text-sm outline-none placeholder:text-ink-400 focus:border-brand-400"
+          className="mt-2 w-full rounded-xl border border-ink-600 bg-ink-800 px-4 py-3 text-base sm:text-sm outline-none placeholder:text-ink-400 focus:border-brand-400"
         />
 
         {error && (

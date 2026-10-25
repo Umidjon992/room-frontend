@@ -38,7 +38,7 @@ function RoundButton({
       aria-label={label}
       title={label}
       className={cn(
-        "relative grid h-12 w-12 shrink-0 place-items-center rounded-full transition focus-visible:outline-2 focus-visible:outline-brand-400",
+        "relative grid h-11 w-11 shrink-0 place-items-center rounded-full transition sm:h-12 sm:w-12 focus-visible:outline-2 focus-visible:outline-brand-400",
         danger ? "bg-red-500 hover:bg-red-600" : active ? "bg-ink-700 hover:bg-ink-600" : "bg-red-500/90 hover:bg-red-500",
         className,
       )}
@@ -85,7 +85,7 @@ export function ControlBar({ isHost, chatOpen, onToggleChat, onLeave, onEnd, onE
 
   return (
     <footer className="px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-1 sm:px-5">
-      <div className="mx-auto flex w-fit max-w-full items-center justify-center gap-2 overflow-x-auto rounded-full border border-ink-700 bg-ink-900/90 p-2 sm:gap-3">
+      <div className="mx-auto flex w-fit max-w-full items-center justify-center gap-1.5 overflow-x-auto rounded-full border border-ink-700 bg-ink-900/90 p-1.5 sm:gap-3 sm:p-2">
         <RoundButton active={isMicrophoneEnabled} label={isMicrophoneEnabled ? "Выключить микрофон" : "Включить микрофон"} onClick={() => toggle("mic")}>
           {isMicrophoneEnabled ? <Mic className="h-5 w-5" /> : <MicOff className="h-5 w-5" />}
         </RoundButton>
@@ -112,9 +112,9 @@ export function ControlBar({ isHost, chatOpen, onToggleChat, onLeave, onEnd, onE
         {isHost && (
           <button
             onClick={() => setConfirmEnd(true)}
-            className="h-12 shrink-0 rounded-full border border-red-500/50 px-4 text-sm font-semibold text-red-300 hover:bg-red-500/10"
+            className="h-11 shrink-0 rounded-full border border-red-500/50 px-3 text-xs sm:h-12 sm:px-4 sm:text-sm font-semibold text-red-300 hover:bg-red-500/10"
           >
-            Завершить для всех
+            Завершить<span className="hidden sm:inline"> для всех</span>
           </button>
         )}
       </div>

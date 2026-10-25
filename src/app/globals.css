@@ -54,3 +54,8 @@ body {
   animation: speaking-pulse 1.4s ease-in-out infinite;
   border-color: var(--color-accent) !important;
 }
+
+.min-h-screen-dvh {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
